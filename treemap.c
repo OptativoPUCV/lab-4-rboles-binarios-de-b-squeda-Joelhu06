@@ -148,6 +148,9 @@ Pair * firstTreeMap(TreeMap * tree)
     return nodo->pair;
 }
 
-Pair * nextTreeMap(TreeMap * tree) {
-    return NULL;
+Pair * nextTreeMap(TreeMap * tree)
+{
+    TreeNode *nodo = tree->current;
+    if (nodo->right != NULL) nodo->right;
+    return nodo->pair;
 }
