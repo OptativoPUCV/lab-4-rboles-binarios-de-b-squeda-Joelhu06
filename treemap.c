@@ -160,4 +160,15 @@ Pair * nextTreeMap(TreeMap * tree)
         return nodo->pair;
     } 
     
+    TreeNode *parent = nodo->parent;
+    while (parent != NULL && nodo == parent->right)
+    {
+        nodo = parent;
+        parent = parent->parent;
+    }
+    
+    tree->current = parent;
+
+    if (parent == NULL) return NULL;
+    return parent->pair;
 }
